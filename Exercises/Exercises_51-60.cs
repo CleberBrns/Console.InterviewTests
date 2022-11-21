@@ -180,7 +180,6 @@ namespace Console.InterviewTests.Exercises
 
             for (int i = 0; i < inputArray.Length -1; i++)
             {
-                var teste = inputArray[i + 1] - inputArray[i] - 1;
                 ctr += inputArray[i + 1] - inputArray[i] - 1;
             }
 
