@@ -15,7 +15,7 @@ namespace Console.InterviewTests
             //Exercises.Exercises_21_30.Exercise28();
             //Exercises.Exercises_31_40.Exercise38();
             //Exercises.Exercises_41_50.Exercise50();
-            Exercises.Exercises_51_60.Exercise57();
+            Exercises.Exercises_51_60.Exercise58();
         }
     }
 }

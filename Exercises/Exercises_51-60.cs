@@ -186,5 +186,41 @@ namespace Console.InterviewTests.Exercises
             return ctr;
         }
 
+        /// <summary>
+        /// Write a C# program to check whether it is possible to create a strictly increasing sequence 
+        /// from a given sequence of integers as an array.
+        /// </summary>
+        public static void Exercise58()
+        {
+            int[] array1 = { 1, 3, 5, 6, 9 };
+            int[] array2 = { 0, 10 };
+            int[] array3 = { 1, 3, 1, 3 };
+
+            System.Console.WriteLine($"Values in the first integer array: {string.Join(", ", array1)}");
+            System.Console.WriteLine($"Values in the second integer array: {string.Join(", ", array2)}");
+            System.Console.WriteLine($"Values in the third integer array: {string.Join(", ", array3)}");
+
+            System.Console.WriteLine("Is it possible to create a strictly increasing sequence from the follow integers arrays?");
+
+            System.Console.WriteLine($"Array 1; {CheckIncreasingSequence(array1)}");
+            System.Console.WriteLine($"Array 2; {CheckIncreasingSequence(array2)}");
+            System.Console.WriteLine($"Array 3; {CheckIncreasingSequence(array3)}");
+
+            System.Console.ReadKey();
+        }
+
+        static bool CheckIncreasingSequence(int[] intSeq)
+        {
+            int x = 0;
+            for (int i = 0; i < intSeq.Length - 1; i++)
+            {
+                if (intSeq[i] >= intSeq[i + 1])
+                    x++;
+                if (i + 2 < intSeq.Length && intSeq[i] >= intSeq[i + 2])
+                    x++;
+            }
+            return x <= 2;
+        }
+
     }
 }
